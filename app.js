@@ -8,7 +8,8 @@ search.addEventListener("click", () => {
   const APIKey = "16aef503fb4a8a8ca77449b134a07bfb";
   const city = document.querySelector(".search-box input").value;
 
-  if (city === "") return;
+  if (city === "") 
+  return;
 
   fetch(
     `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${APIKey}`
@@ -22,7 +23,9 @@ search.addEventListener("click", () => {
         error404.style.display = "block";
         error404.classList.add("fadeIn");
         return;
+       
       }
+      
 
       error404.style.display = "none";
       error404.classList.remove("fadeIn");
@@ -73,10 +76,8 @@ search.addEventListener("click", () => {
     });
 });
 
-
 // const apiKey = "16aef503fb4a8a8ca77449b134a07bfb";
 // const apiUrl = "https://api.openweathermap.org/data/2.5/weather?units=metric&q=";
-
 
 // const searchBox = document.querySelector( ".search input" );
 // const sBtn = document.querySelector( "#btn" );
@@ -95,4 +96,3 @@ search.addEventListener("click", () => {
 // sBtn.addEventListener( "click", () =>
 // {   checkWeather( searchBox.value );
 // } )
-
